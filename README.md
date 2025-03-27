@@ -7,3 +7,10 @@
 
 ## progress
 - 2025-03-26 : download dataset and unzip. next action is tokenize
+
+## dependencies
+- take a look requirements.txt
+- [spaCy](https://spacy.io/usage) 
+    - additional dictionary is required
+    - `python -m spacy download en_core_web_sm`
+    - `python -m spacy download de_core_news_sm`
