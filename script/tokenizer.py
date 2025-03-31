@@ -28,19 +28,19 @@ class Tokenizer():
             if lang == 'en':
                 tokens = self._tokenize_en(text)
             counter.update(tokens) # update count
-
-        # add special tokens to counter
-        token2idx = {token: idx + len(special_tokens) for idx, token in enumerate(counter.keys())}
+        
+        # sort vocab add special tokens to counter
+        token2idx = {token: idx + len(special_tokens) for idx, (token, freq) in enumerate(counter.most_common())}
         for idx, special_token in enumerate(special_tokens):
             token2idx[special_token] = idx
         
-        # sort by frequency
-        token2idx = dict(sorted(token2idx.items(), key=lambda item: item[1], reverse=False))
+        # sort vocab by index
+        token2idx = dict(sorted(token2idx.items(), key=lambda item: item[1]))
         
         # idx to token
         idx2token = {idx: token for token, idx in token2idx.items()}
 
-        return token2idx, idx2token
+        return token2idx, idx2token, counter
 
     def max_text_len(self, texts):
         max_len = 0
