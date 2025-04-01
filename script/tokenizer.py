@@ -5,6 +5,14 @@ class Tokenizer():
     def __init__(self):
         self.spacy_de = spacy.load('de_core_news_sm')
         self.spacy_en = spacy.load('en_core_web_sm')
+    
+    def tokenize(self, lang, text, remove_eos=True):
+        if lang == 'de':
+            return self._tokenize_de(text, remove_eos)
+        elif lang == 'en':
+            return self._tokenize_en(text, remove_eos)
+        else:
+            raise ValueError("Language not supported. Please use 'de' or 'en'.")
 
     def _tokenize_de(self, text, remove_eos=True):
         if remove_eos:
