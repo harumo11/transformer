@@ -12,6 +12,7 @@
 - 2025-03-26 : download dataset and unzip. next action is tokenize
 - 2025-03-27 : tokenize. next action is embedding
 - 2025-03-29 : embeddin test and tokenizer class is added
+- 2025-04-01 : tokenize whole dataset. next action is making batch
 
 ## dependencies
 - take a look requirements.txt
