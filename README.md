@@ -13,6 +13,7 @@
 - 2025-03-27 : tokenize. next action is embedding
 - 2025-03-29 : embeddin test and tokenizer class is added
 - 2025-04-01 : tokenize whole dataset. next action is making batch
+- 2025-04-03 : word embedding class. next action is positional encoding.
 
 ## dependencies
 - take a look requirements.txt
