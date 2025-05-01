@@ -3,3 +3,5 @@ data
 script/__pycache__
 script/*.pyc
 script/*.pyo
+*.pth
+*.png
