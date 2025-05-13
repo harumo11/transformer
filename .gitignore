@@ -5,3 +5,4 @@ script/*.pyc
 script/*.pyo
 *.pth
 *.png
+notebook/tutorial/runs/
